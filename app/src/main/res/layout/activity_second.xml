@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/prev"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/prev"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/circularLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/daysOfWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="day name"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/dateNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="day int"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/monthAndYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="sal mah"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+
+                <com.devadvance.circularseekbar.CircularSeekBar
+                android:id="@+id/circularSeekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:circle_color="#D15D5D"
+                app:circle_progress_color="#fff"
+                app:circle_x_radius="150dp"
+                app:circle_y_radius="150dp"
+                app:end_angle="270"
+                app:max="31"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                app:pointer_alpha_ontouch="10"
+                app:pointer_color="#fff"
+                app:pointer_halo_color="#fff"
+                app:pointer_halo_color_ontouch="#fff"
+                app:progress="25"
+                app:start_angle="270"
+                app:use_custom_radii="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/next"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="10">
+
+            <TextView
+                android:id="@+id/shamsi_date_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="13sp"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="date"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/islamic_date_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#fff"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="date"/>
+
+            <TextView
+                android:id="@+id/gregorian_date_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="#fff"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="date"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
